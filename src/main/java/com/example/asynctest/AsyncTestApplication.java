@@ -32,15 +32,15 @@ public class AsyncTestApplication {
             logger.info("Tiger Order now : " + i + " / Queue size = " + taskExecutor.getQueue().size());
         }
 
-//        for(int i=0; i<100; i++) {
-//            try {
-//                Thread.sleep(50);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            ayncService.cats1(i);
-//            logger.info("Cats1 Order now : " + i + " / Queue size = " + taskExecutor2.getQueue().size());
-//        }
+        for(int i=0; i<100; i++) {
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            asyncService.cats1(i);
+            logger.info("Cats1 Order now : " + i + " / Queue size = " + taskExecutor2.getQueue().size());
+        }
     }
 }
 
