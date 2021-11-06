@@ -5,17 +5,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 @Component
-public class AyncService {
-    private static final Logger logger = LoggerFactory.getLogger(AyncService.class);
+public class AsyncService {
+    private static final Logger logger = LoggerFactory.getLogger(AsyncService.class);
 
     @Async("taskExecutor")
-    public void test1(int i) {
+    public void tiger(int i) {
         logger.info("Start order_1_" + i);
         try {
-            Thread.sleep(1000);
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -23,7 +22,7 @@ public class AyncService {
     }
 
     @Async("taskExecutor2")
-    public void test2(int i) {
+    public void cats1(int i) {
         logger.info("Start  order_2_" + i);
         try {
             Thread.sleep(100);

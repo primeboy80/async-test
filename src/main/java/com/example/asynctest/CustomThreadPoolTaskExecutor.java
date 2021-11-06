@@ -10,10 +10,9 @@ public class CustomThreadPoolTaskExecutor extends ThreadPoolTaskExecutor {
     @Override
     protected BlockingQueue<Runnable> createQueue(int queueCapacity) {
         queue = super.createQueue(queueCapacity);
-        System.out.println("CustomThreadPoolTaskExecutor.createQueue()");
         return queue;
-
     }
+
     public BlockingQueue<Runnable> getQueue(){
         return queue;
     }
